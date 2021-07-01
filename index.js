@@ -2,6 +2,10 @@
 window.onload = function(){
     displayEntireBoard()
     randomNumberGenerator()
+    const clickButton = document.getElementById("random-number")
+    clickButton.addEventListener("click", function () {
+        randomNumberGenerator();
+        })
 }
 const displayEntireBoard= function(){
     let bingoBoardNode = document.getElementById("bingo-board-container")
@@ -13,10 +17,14 @@ const displayEntireBoard= function(){
     }
 }
 
+const getRandom = function () {
+    let random = Math.floor(Math.random()* 76)
+    return random
+  }
 const randomNumberGenerator = function () {
-    let random = Math.round(Math.random()* 75 + 1)
     const genNumber = document.getElementById("generated-number");
-    genNumber.innerText = "Number: " + random
+    let random1 = getRandom()
+    genNumber.innerText = "Number: " + random1
     const cellSelected = document.querySelectorAll("#bingo-board-container .board-cells");
-        cellSelected[random - 1].classList.add("selected");
+    cellSelected[random1 - 1].classList.add("selected");
 }
