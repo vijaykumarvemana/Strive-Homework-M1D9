@@ -19,14 +19,12 @@ h1 {
         border-color: #4a4a4a;
         padding: 12px;
         border-radius: 8px;
-        display: inline-block;
-        width:20% ;
-        
+        display: inline-block;      
 }
 .board-cells{
     background-color: #0f0f0f;
     display: inline-block;
-    width: 10%;
+    width: 5%;
     min-height: 10px;
     text-align: center;
     padding: 10px;
@@ -37,3 +35,17 @@ h1 {
     margin: 2px;
     border-color: #383838;
 }
+.selected {
+    border-color: #888;
+    background-color: #444;
+}
+#random-number{
+    background: #2e93e6;
+    color: white;
+    border-color: white;
+    border-radius: 2px;
+    padding: 3px;
+    margin: 5px;
+    font-size: 24px;
+}
+
